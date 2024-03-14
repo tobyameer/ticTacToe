@@ -15,7 +15,7 @@ function Board() {
   let status;
 
   if (winner) {
-    status = "Winner: " + (xisNext ? "X" : "O");
+    status = "Winner: " + (!xisNext ? "X" : "O");
   } else {
     status = "Next player: " + (xisNext ? "X" : "O");
   }
@@ -36,6 +36,7 @@ function Board() {
 
   return (
     <>
+      <h1 className="header">TicTacToe</h1>
       <div className="board">
         <div className="status">{status}</div>
         <div className="board-row">
